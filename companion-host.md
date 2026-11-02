@@ -697,7 +697,7 @@ checked rather than assumed. Collect a manifest from each board and diff
 them on the companion:
 
 ```sh
-cd platforms/autosd/x5h
+cd rcar-x5h-autosd
 for b in 20 21; do
   ssh root@192.168.0.$b /usr/sbin/x5h-manifest.sh > /tmp/m-$b.txt
 done

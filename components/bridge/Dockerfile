@@ -48,7 +48,7 @@
 # Build ON THE BOARD, where the base already is:
 #
 #   # 1. copy this directory across (it is three small files)
-#   scp -r platforms/autosd/x5h/components/bridge \
+#   scp -r components/bridge \
 #     root@192.168.0.20:/var/tmp/openadkit-bridge
 #
 #   # 2. build the thin layer. --pull=never keeps podman off the network

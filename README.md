@@ -1,5 +1,9 @@
 # AutoSD on R-Car X5H (Strategy A: BSP kernel + AutoSD userspace)
 
+> Board support for running [Open AD Kit](https://github.com/autowarefoundation/openadkit)
+> on the R-Car X5H. It moved here, with its history, from Open AD Kit's
+> `platforms/autosd/x5h`; generic AutoSD support stays in Open AD Kit.
+
 Non-ostree AutoSD 10 rootfs for the R-Car X5H (`r8a78000` / `ironhide`) board,
 netbooted (TFTP kernel + NFS root) under either of two kernels that share the
 same NFS root: the unmodified Renesas BSP kernel 6.1.102, or a rebuilt
@@ -600,7 +604,7 @@ The durable route: it depends on nothing that expires. Each command below is
 the one CI runs, in CI's order.
 
 ```bash
-cd platforms/autosd/x5h
+cd rcar-x5h-autosd
 
 # 1. The AutoSD rootfs tar. `--tar` builds the container content straight
 #    into a tar, so there is no `podman create` + `podman export` round trip
@@ -712,7 +716,7 @@ First point these four variables at whichever route you took. They are the only
 difference between the two:
 
 ```bash
-cd platforms/autosd/x5h   # the relative paths below, and ./scripts/... later, need this
+cd rcar-x5h-autosd   # the relative paths below, and ./scripts/... later, need this
 
 # Built from source:
 TAR=aib/x5h-rootfs.tar

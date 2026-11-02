@@ -1,0 +1,23 @@
+name: tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  # Every unit test suite under components/nodes: traj_relay's point budget
+  # for domain 2's MTU, the stop-distance metric awk and the before/after demo
+  # orchestrator's local gates. None of them needs ROS or the board.
+  node-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pytest and PyYAML
+        run: python3 -m pip install --user pytest pyyaml
+
+      - name: Run node and metrics unit tests
+        run: python3 -m pytest -q
+        working-directory: components/nodes

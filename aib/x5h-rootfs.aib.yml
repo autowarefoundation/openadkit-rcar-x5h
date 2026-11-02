@@ -158,7 +158,7 @@ content:
   #     symlink, here to var/opt), which is recorded because the next
   #     profile to reach for /opt will hit the same wall.
   #
-  # Note this diverges from platforms/autosd/planning-simulator, which has
+  # Note this diverges from Open AD Kit's platforms/autosd/planning-simulator, which has
   # make_dirs for /opt/tier4/kashiwanoha_map and /usr/local/libexec plus
   # add_files into /usr/local/libexec. That profile has the same latent
   # defect and has evidently never been through an aib build; the divergence
@@ -387,7 +387,7 @@ content:
     # rpmsg-eth: only the unit file and its ifup helper are installed by
     # this manifest. The daemon binary itself (ExecStart=/usr/local/bin/
     # rpmsg-eth) is a statically-linked binary built on a host with an
-    # aarch64 cross toolchain from platforms/autosd/x5h/rpmsg-eth/rpmsg-eth.c
+    # aarch64 cross toolchain from rpmsg-eth/rpmsg-eth.c
     # and is deliberately NOT checked into the repo or copied by this
     # manifest -- it is staged onto the board separately, per the manual
     # install procedure documented in rpmsg-dualboot.md.

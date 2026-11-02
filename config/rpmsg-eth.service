@@ -1,6 +1,6 @@
 # rpmsg-eth.service -- bridges the CR52's rpmsg-eth endpoint to a Linux TAP
 # device (tap0), giving the safety island a normal IP link to the A-core
-# side (see platforms/autosd/x5h/rpmsg-eth/rpmsg-eth.c).
+# side (see rpmsg-eth/rpmsg-eth.c).
 #
 # Plain host unit, not a Quadlet container: the daemon needs direct access
 # to /dev/net/tun, the CR52's /dev/rpmsg_ctrl*/rpmsg<N> chardevs, and the

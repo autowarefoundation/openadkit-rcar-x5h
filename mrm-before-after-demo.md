@@ -46,8 +46,8 @@ edited pair without rebuilding the image, put **both** files somewhere
 writable and point the demo at them:
 
 ```
-scp platforms/autosd/x5h/scripts/x5h-stack-smoke.sh \
-    platforms/autosd/x5h/scripts/x5h-stop-metrics.awk \
+scp scripts/x5h-stack-smoke.sh \
+    scripts/x5h-stop-metrics.awk \
     root@192.168.0.20:/var/tmp/
 ssh root@192.168.0.20 chmod 0755 /var/tmp/x5h-stack-smoke.sh
 echo 'X5H_SMOKE=/var/tmp/x5h-stack-smoke.sh' >> ~/.config/x5h-demo/site.conf
