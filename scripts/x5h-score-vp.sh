@@ -1,6 +1,6 @@
 #!/bin/sh
 # Started by the S-CORE launch manager as component "visionpilot" (CES 2027
-# demo role, platforms/autosd/x5h/score/config/demo). This script is the
+# demo role, score/config/demo). This script is the
 # podman command line and nothing else: the launch manager passes at most 20
 # arguments and only the environment variables its configuration names.
 #
