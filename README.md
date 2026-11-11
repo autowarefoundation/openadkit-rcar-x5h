@@ -606,7 +606,7 @@ The durable route: it depends on nothing that expires. Each command below is
 the one CI runs, in CI's order.
 
 ```bash
-cd rcar-x5h-autosd
+cd openadkit-rcar-x5h
 
 # 1. The AutoSD rootfs tar. `--tar` builds the container content straight
 #    into a tar, so there is no `podman create` + `podman export` round trip
@@ -721,7 +721,7 @@ First point these four variables at whichever route you took. They are the only
 difference between the two:
 
 ```bash
-cd rcar-x5h-autosd   # the relative paths below, and ./scripts/... later, need this
+cd openadkit-rcar-x5h   # the relative paths below, and ./scripts/... later, need this
 
 # Built from source:
 TAR=aib/x5h-rootfs.tar
